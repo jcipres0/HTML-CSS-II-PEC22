@@ -12,7 +12,9 @@
   @include font-size-change("home");
   @include body-container;
 
-  height: 80svh;
+  padding-bottom: 10rem;
+
+  /* height: 80svh; */
 }
 
 .body-index__imagen {
