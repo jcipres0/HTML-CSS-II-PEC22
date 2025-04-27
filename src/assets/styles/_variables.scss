@@ -1,0 +1,64 @@
+@use "sass:color";
+
+// fuente poppins light (300) para cuerpo
+@font-face {
+  font-family: Poppins-Light;
+  src:    url("../../assets/fonts/Poppins-Light.woff2") format("woff2"),
+          url("../../assets/fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+// fuente poppins bold (700) para cuerpo
+@font-face {
+  font-family: Poppins-Bold;
+  src:    url("../../assets/fonts/Poppins-Bold.woff2") format("woff2"),
+          url("../../assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+// fuente arvo regular (400) para cabeceras
+@font-face {
+  font-family: Arvo-Rgular;
+  src:    url("../../assets/fonts/Arvo.woff2") format("woff2"),
+          url("../../assets/fonts/Arvo.woff") format("woff");
+}
+
+// VARIABLES PARA FUENTES
+
+// por si hubiera algún problema con poppins o arvo dejo las de  por defecto según SO o navegador
+$font-family-sans-serif: "Poppins-Light", -apple-system, blinkmacsystemfont, 
+  "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif-bold: "Poppins-Bold", -apple-system, blinkmacsystemfont, 
+  "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, 
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-serif: "Arvo-Regular", "Georgia", "Times New Roman", serif;
+
+// VARIABLES TAMAÑO DE FUENTE
+
+$font-large: 2.3rem;
+$font-medium: 2rem;
+$font-small: 1.5rem;
+$font-x-small: 1.2rem;
+$font-small-h1: 1.4rem;
+$font-large-h1: 1.7rem;
+
+// VARIABLES PARA COLORES
+
+$bk-primary: #fafafa;
+$bk-secondary: color.scale($bk-primary, $lightness: -5%);
+$bk-aux1: #30af09ee;
+$bk-aux2: #3cb0ff;
+$color-texto: #0041f4ef;
+$color-rojo: #e81010ba;
+
+// VARIABLES PARA RESOLUCION DE PANTALLA
+
+$size-screen0: 25rem;
+$size-screen1: 34rem;
+
+// resolución de 768px
+$size-screen2: 48rem;
+
+// resolución de 1024px
+$size-screen3: 74rem;

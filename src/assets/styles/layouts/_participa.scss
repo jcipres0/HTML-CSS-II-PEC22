@@ -1,0 +1,86 @@
+.body-participa{
+    container-type: inline-size;
+    container-name: formulario;
+}
+
+.body-participa__container-f{
+    @include font-size-change("home");
+    @include body-container;
+
+    height: 100svh;   
+}
+
+.body-participa__cuadrao {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "nombre"
+        "apellido"
+        "email"
+        "interes"
+        "boton";
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.body-participa__nombre{
+    grid-area: nombre;
+}
+
+.body-participa__apellido {
+    grid-area: apellido;
+}
+
+.body-participa__email {
+    grid-area: email;
+}
+
+.body-participa__interes {
+    grid-area: interes;
+}
+
+.body-participa__boton {
+    grid-area: boton;
+}
+
+.body-participa__texto {
+    color: $color-texto;
+}
+
+.body-participa__texto--rojo{
+    color: $color-rojo;
+}
+
+.body-participa__titulo--personalizado {
+    color: $color-texto;
+    background: linear-gradient(to right, #72c0f1, #13ebf3);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+}
+
+@supports (font-size: clamp(0.9rem, 1.7vw, 2.2rem)) {
+    .body-participa__titulo--personalizado{
+        font-size: clamp(0.9rem, 1.7vw, 2.2rem);
+    }
+}
+
+@container formulario (min-width: 48rem) {
+    .body-participa__cuadrao {
+        padding-top: 5rem;        
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: 
+            "nombre apellido"
+            "email interes"
+            "boton boton";
+    }
+
+    .body-participa__cuadrao :is(p, .body-participa__formulario){
+        padding-right: 1.5rem;
+    }
+
+    .body-participa__formulario :is(.body-participa__nombre, .body-participa__apellido, .body-participa__email, .body-participa__interes, .body-participa__boton){
+        margin-bottom: 1rem;
+     
+    }
+}

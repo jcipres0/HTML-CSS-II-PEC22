@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="images/x-icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>Economía circular</title>
+  </head>
+  <body class="bg-new-grey body-contenido">
+    <include src="./views/header.html"></include>
+    <main class="body-contenido__container-cc">
+      <h1 class="mx-auto text-center mb-3"><mark class="body-contenido__titulo--personalizado">Conoce las jornadas de economía circular</mark></h1>
+      <section class="body-contenido__seccion">
+        <img class="body-contenido__imagen" src="assets/images/circular-1080px.webp" alt="grafico circular">
+      </section>
+      <section class="body-contenido__seccion mt-4">
+        <p>APUNTATE CUANTO ANTES, LAS PLAZAS SON LIMITADAS!!</p>
+      </section>
+      <section class="body-contenido__compone body-contenido__seccion">
+        <div class="body-contenido__texto">
+          <p>Desde el Ayto.de OZ queremos profundizar en las oportunidades que aporta la <a class="body-contenido__enlace" href="#" title="Sitio oficial de Economía Circular">Economía Circular</a> en el área de Residuos y ofrecer ejemplos prácticos que se puedan implementar y, tal como diría <a class="body-contenido__enlace" href="#" title="Sitio oficial de Richard Smith">Richard Smith</a>, uno de nuestros ponentes: <blockquote class="body-contenido__cita"> "El objetivo no debe centrarse en la gestión de los residuos, sino en cambiar el modelo para eliminar el concepto de residuos y tratarlo como nuevas materias primas, y eso implica mucho más que reciclar."</blockquote></p>
+          <p><u>Los temas a tratar en estas jornadas serán:</u></p>
+          <ul>
+            <li class="body-contenido__item">Soluciones para los Residuos desde la Economía Circular.</li>
+            <li class="body-contenido__item body-contenido__item--importante">Legislación sobre Residuos y Economía Circular (importante).</li>
+            <li class="body-contenido__item">Aprovechamiento energético de residuos.</li>
+            <li class="body-contenido__item">Biorrefinerías: Aprovechamiento de subproductos.</li>
+            <li class="body-contenido__item">De residuos agrícolas a producto innovador.</li>
+          </ul>
+          <p class="body-contenido__contacta mt-5">Si tienes cualquier pregunta sobre las jornadas puedes llamar al 555 985555 o usar el correo <a href="mailto:blabla@aytooz.com">blabla@aytooz.com</a></p>
+        </div>
+        <div id="carouselExampleInterval" class="carousel slide body-contenido__carrusel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img src="./assets/images/infografia-1-1.webp" class="img-fluid d-block w-100" alt="infografia-1-1">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="./assets/images/infografia-2-2.webp" class="d-block w-100" alt="infografia-2-2">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="./assets/images/infografia-3-3.webp" class="d-block w-100" alt="infografia-3-3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

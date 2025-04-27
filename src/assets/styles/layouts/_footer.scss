@@ -1,0 +1,14 @@
+.mi-footer{
+    @include head-foot;
+    @include font-size-change("footer");
+}
+
+.mi-footer__logof {
+    @include logo-size-change;
+
+    max-height: 3rem;
+}
+
+.mi-footer__iconos--verdes{
+    color: $bk-aux1;
+}

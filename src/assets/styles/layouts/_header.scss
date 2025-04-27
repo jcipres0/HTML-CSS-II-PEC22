@@ -1,0 +1,47 @@
+.mi-header {
+    @include head-foot;
+}
+
+.mi-header__mispan {
+    @include font-size-change("header");
+
+    background: linear-gradient(135deg,#67b26f,#66b274 9.99%,#64b27f 19.07%,#62b28f 27.44%,#5eb1a1 35.26%,#59b1b3 42.72%,#54b1c5 50%,#4fb1d5 57.28%,#4ab1e3 64.74%,#45b0ee 72.56%,#40b0f7 80.93%,#3db0fd 90.01%,#3cb0ff);
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    margin: 0 auto;
+}
+
+.mi-header__mispan--bold{
+    font-weight: bold;
+}
+
+.mi-header__logo {
+    @include logo-size-change;
+}
+
+@media (min-width: 62rem) {
+    .mi-header__item {
+        margin-left: 2rem;
+    }
+    
+    .mi-header__item a {
+        border-bottom: 0.3rem solid;
+    }
+
+    .mi-header__item a:hover{
+        transform: translate(-5%, -5%) scale(1.1);
+        transition: 0.5 linear;
+        color:$bk-aux2;
+    }
+}
+
+@supports (font-size: clamp(1.2rem, 3vw, 2.7rem)) {
+    .mi-header__mispan{
+        font-size: clamp(1.2rem, 3vw, 2.7rem);
+    }
+}
+

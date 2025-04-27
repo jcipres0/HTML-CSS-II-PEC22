@@ -1,0 +1,71 @@
+
+@layer general {
+    @supports (font-size: clamp(0.9rem, 1.7vw, 2.2rem)) {
+        .body-ponentes__titulo--personalizado{
+            font-size: clamp(0.9rem, 1.7vw, 2.2rem);
+        }
+    }
+
+    .body-ponentes{
+        container-type: inline-size;
+        container-name: speakers;
+    }
+        
+    .body-ponentes__container-p{
+        @include font-size-change("home");
+        @include body-container;
+    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-bottom: 10rem;
+        width: 100%;
+    }
+}
+    
+@layer tarjeta {
+    .body-ponentes__tarjeta {
+        width: 13rem;
+    }
+    
+    .body-ponentes__texto{
+        font-size: 0.7rem;
+        color: $bk-aux1;
+    }
+    
+    .body-ponentes__container-p :is(.body-ponentes__imagen, .body-ponentes__tarjeta){
+        border-radius: 3rem;
+    }
+    
+    .body-ponentes__titulo--personalizado {
+        color: #ffe600;
+        background: linear-gradient(to right, #c7633b, #ecd19b);
+        border-radius: 0.5rem;
+        padding: 0.2rem 0.4rem;
+        font-weight: bold;
+    }
+}
+    
+@container speakers (min-width: 38rem){
+    .body-ponentes__container-p{
+        gap: 3rem;
+        padding-bottom: 6rem;
+    }
+    
+    .body-ponentes__titulo {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    
+    .body-ponentes__tarjeta {
+        width: 14rem;
+    }
+    
+    .body-ponentes__texto{
+        font-size: 1rem;
+        color: $bk-aux1;
+    }
+}
+

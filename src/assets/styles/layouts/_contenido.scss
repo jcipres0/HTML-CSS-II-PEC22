@@ -1,0 +1,128 @@
+@layer accesible {
+    .body-contenido__enlace {
+      color: #f00;
+      text-decoration:underline;
+    }
+
+    .body-contenido__enlace:focus{
+        outline:auto;
+    }
+
+    .body-contenido__enlace:hover {
+      color: #d80c79;
+    }
+ }
+  
+@layer noaccesible {
+    .body-contenido__enlace {
+        color: #0c971c;
+        text-decoration: none;
+        font-weight:bolder; 
+    }
+    
+    .body-contenido__enlace:focus{
+      outline: none;
+    }
+
+    .body-contenido__enlace:hover {
+        color: #2ed80c;
+    }
+}
+
+.body-contenido{
+    container-type: inline-size;
+    container-name: programa
+}
+
+.body-contenido__container-cc {
+    @include font-size-change("home");
+    @include body-container;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.body-contenido__container-cc :is(.body-contenido__cita, .body-contenido__item){
+    font-style: italic;
+}
+
+.body-contenido__imagen{
+    width: 100%;
+    max-width: 55rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.body-contenido__compone{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "texto"
+        "carrusel"
+        "contacta";
+}
+ 
+.body-contenido__item {
+    color: $color-texto;
+}
+
+.body-contenido__item--importante{
+    text-decoration: underline;
+}
+
+.body-contenido__contacta {
+    font-size: 0.8rem;
+    grid-area: contacta;
+ }
+
+.body-contenido__texto {
+    grid-area: texto;
+}
+
+.body-contenido__carrusel {
+    grid-area: carrusel;
+}
+
+.body-contenido__titulo--personalizado {
+    color: $bk-aux1;
+    background: linear-gradient(to right, #a8e6cf, #dcedc1);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    font-weight: bold;
+}
+
+@supports (font-size: clamp(0.9rem, 1.7vw, 2.2rem)) {
+    .body-contenido__titulo--personalizado{
+        font-size: clamp(0.9rem, 1.7vw, 2.2rem);
+    }
+}
+
+@supports(selector(:has(*))){
+    .body-contenido__seccion:has(blockquote){
+        font-family: $font-family-sans-serif-bold;
+    }
+}
+
+@container programa (min-width: 38rem){
+    .body-contenido__container-cc {
+        padding: 0 2rem;
+    }
+
+    .body-contenido__compone {
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas: 
+            "carrusel texto"
+            "contacta contacta";  
+        gap: 3rem;
+    }
+}
+
+@container programa (min-width: 75rem){
+    .body-contenido__compone {
+        padding: 6rem;  
+    } 
+}
